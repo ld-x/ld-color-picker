@@ -31,8 +31,9 @@ export default class extends Component {
 
     const currentStyle = editorState.getCurrentInlineStyle()
     if (!currentStyle.has(color)) {
-      console.log(color)
-      const newState = RichUtils.toggleInlineStyle(editorState, `color-${color}`)
+      // console.log(color)
+      const safeName = color.replace('#', '');
+      const newState = RichUtils.toggleInlineStyle(editorState, `color-${safeName}`);
       onChange(newState)
       this.setState({ showModal: false })
     }
