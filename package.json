@@ -1,6 +1,6 @@
 {
   "name": "ld-color-picker",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Last Draft color-picker plugin",
   "main": "lib/color/plugin.js",
   "scripts": {
