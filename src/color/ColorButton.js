@@ -31,7 +31,6 @@ export default class extends Component {
 
     const currentStyle = editorState.getCurrentInlineStyle()
     if (!currentStyle.has(color)) {
-      // console.log(color)
       const safeName = color.replace('#', '');
       const newState = RichUtils.toggleInlineStyle(editorState, `color-${safeName}`);
       onChange(newState)
@@ -41,7 +40,7 @@ export default class extends Component {
 
   renderColorModal() {
     return (
-      <ColorModal onClick={this.stopPropagation} className='ld-Color-modal'>
+      <ColorModal onClick={this.stopPropagation} className='ld-Color-modal' theme={this.props.theme}>
         <ColorCloseIcon onClick={::this.onCloseButtonClick} className='ld-Color-close-icon'>
           <svg width='24' height='24' viewBox='0 0 24 24' className='ld-button-close'>
             <g fill='currentColor' fillRule='evenodd'>
@@ -72,15 +71,14 @@ export default class extends Component {
 
 const ColorModal = styled.div`
   position: absolute;
-  left: 4rem;
-  margin-top: -2.4rem;
+  margin-top: 0.6rem;
   display: flex;
   flex-wrap: wrap;
-  width: 250px;
+  width: 245px;
   border: 1px solid #F1F1F1;
   border-radius: 2px;
   z-index: 100;
-  background: white;
+  background-color: ${props => props.theme.backgroundColor};
   box-shadow: 3px 3px 5px #BFBDBD;
 `
 
