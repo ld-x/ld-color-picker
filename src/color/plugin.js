@@ -5,10 +5,8 @@
  */
 
 import ColorButton from './ColorButton'
-import ColorBlock from './ColorBlock'
 
 export default {
   type: 'color-picker',
-  button: ColorButton,
-  block: ColorBlock
+  button: ColorButton
 }
