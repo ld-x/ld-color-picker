@@ -5,8 +5,10 @@
  */
 
 import ColorButton from './ColorButton'
+import ColorModal from './ColorModal'
 
 export default {
   type: 'color-picker',
-  button: ColorButton
+  button: ColorButton,
+  modal: ColorModal
 }
