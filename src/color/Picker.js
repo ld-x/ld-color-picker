@@ -41,15 +41,15 @@ const ColorPickerWrapper = styled.div`
   box-shadow: 0 1px 18px 0 rgba(0, 0, 0, 0.3);
   margin-top: -3rem;
   display: flex;
-  height: 14rem;
-  padding: 1rem;
+  height: 15rem;
+  padding: 1.5rem;
+  padding-top: 1.8rem;
   z-index: 100;
 `
 
 const ColorWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  padding: 0.8rem;
 `
 
 const ColorSpan = styled.span`
@@ -63,7 +63,9 @@ const ColorSpan = styled.span`
 `
 
 const CloseWrapper = styled.div`
-  padding: 0;
+  position: absolute;
+  top: 0.2rem;
+  right: 0.1rem;
   cursor: pointer;
   border: 0;
   background: transparent;

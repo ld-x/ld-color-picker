@@ -19,7 +19,7 @@ export default class extends Component {
 
   render () {
     return (
-      <Wrapper style={{ width: `350px`, left: `0px` }}>
+      <Wrapper>
         <Picker onSelected={::this.setColor} closeModal={this.props.closeModal} />
       </Wrapper>
     )
@@ -27,6 +27,7 @@ export default class extends Component {
 }
 
 const Wrapper = styled.div`
+  width: 260px;
   position: relative;
   background-color: inherit;
 `
