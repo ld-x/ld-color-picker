@@ -36,5 +36,22 @@ export default class ExampleEditor extends Component {
     )
   }
 }
+```
 
+## Styles
+
+Last Draft plugins use styled-components 💅 for the base styling.
+
+## Custom Styles with CSS
+
+You can also add custom css to override the base styling with the following class names specified below:
+
+```css
+.ld-button-color-picker {}
+.ld-color-picker-modal-wrapper {}
+.ld-color-picker-wrapper {}
+.ld-color-picker-close-wrapper {}
+.ld-color-picker-close {}
+.ld-color-picker {}
+.ld-color-picker-item {}
 ```

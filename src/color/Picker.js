@@ -9,9 +9,9 @@ export default class extends Component {
 
   render() {
     return (
-      <ColorPickerWrapper>
-        <CloseWrapper className='ld-emoji-close-button' onClick={this.props.closeModal}>
-          <Close width='24' height='24' viewBox='0 0 24 24' className='ld-button-close'>
+      <ColorPickerWrapper className='ld-color-picker-wrapper'>
+        <CloseWrapper className='ld-color-picker-close-wrapper' onClick={this.props.closeModal}>
+          <Close width='24' height='24' viewBox='0 0 24 24' className='ld-color-picker-close'>
             <g fill='currentColor' fillRule='evenodd'>
               <path d='M16.95 5.636l1.414 1.414L7.05 18.364 5.636 16.95z' />
               <path d='M16.95 18.364l1.414-1.414L7.05 5.636 5.636 7.05z' />
@@ -19,10 +19,10 @@ export default class extends Component {
           </Close>
         </CloseWrapper>
 
-        <ColorWrapper>
+        <ColorWrapper className='ld-color-picker'>
           {
             colors.map((c, i) => {
-              return <ColorSpan key={i} color={c} onClick={() => this.handleColorChange(c)} />
+              return <ColorSpan className='ld-color-picker-item' key={i} color={c} onClick={() => this.handleColorChange(c)} />
             })
           }
         </ColorWrapper>

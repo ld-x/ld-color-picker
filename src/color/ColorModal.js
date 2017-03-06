@@ -19,7 +19,7 @@ export default class extends Component {
 
   render () {
     return (
-      <Wrapper>
+      <Wrapper className='ld-color-picker-modal-wrapper'>
         <Picker onSelected={::this.setColor} closeModal={this.props.closeModal} />
       </Wrapper>
     )
